@@ -1,0 +1,46 @@
+[debug] [2021-10-20T14:02:27.739Z] ----------------------------------------------------------------------
+[debug] [2021-10-20T14:02:27.741Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Loc\Documents\GitHub\github-actions-learning\node_modules\firebase-tools\lib\bin\firebase.js deploy --token $FIREBASE_TOKEN --only hosting
+[debug] [2021-10-20T14:02:27.741Z] CLI Version:   7.14.0
+[debug] [2021-10-20T14:02:27.741Z] Platform:      win32
+[debug] [2021-10-20T14:02:27.741Z] Node Version:  v14.17.4
+[debug] [2021-10-20T14:02:27.742Z] Time:          Wed Oct 20 2021 21:02:27 GMT+0700 (Indochina Time)
+[debug] [2021-10-20T14:02:27.742Z] ----------------------------------------------------------------------
+[debug] [2021-10-20T14:02:27.742Z] 
+[debug] [2021-10-20T14:02:27.754Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-10-20T14:02:27.754Z] > authorizing via --token option
+[debug] [2021-10-20T14:02:27.755Z] [iam] checking project fireship-lessons for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-10-20T14:02:27.756Z] > refreshing access token with scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-10-20T14:02:27.756Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-10-20T14:02:27.935Z] <<< HTTP RESPONSE 400
+[debug] [2021-10-20T14:02:27.937Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/fireship-lessons:testIamPermissions  
+
+[debug] [2021-10-20T14:02:29.043Z] <<< HTTP RESPONSE 401
+[debug] [2021-10-20T14:02:29.043Z] <<< HTTP RESPONSE BODY
+[debug] [2021-10-20T14:02:29.046Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2021-10-20T14:02:29.048Z] > refreshing access token with scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-10-20T14:02:29.048Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-10-20T14:02:29.187Z] <<< HTTP RESPONSE 400
+[debug] [2021-10-20T14:02:29.188Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/fireship-lessons  
+ 
+[debug] [2021-10-20T14:02:29.362Z] <<< HTTP RESPONSE 401
+[debug] [2021-10-20T14:02:29.363Z] <<< HTTP RESPONSE BODY
+[debug] [2021-10-20T14:02:29.364Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2021-10-20T14:02:29.368Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at module.exports (C:\Users\Loc\Documents\GitHub\github-actions-learning\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Request._callback (C:\Users\Loc\Documents\GitHub\github-actions-learning\node_modules\firebase-tools\lib\api.js:39:35)
+    at Request.self.callback (C:\Users\Loc\Documents\GitHub\github-actions-learning\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:400:28)
+    at Request.emit (domain.js:470:12)
+    at Request.<anonymous> (C:\Users\Loc\Documents\GitHub\github-actions-learning\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:400:28)
+    at Request.emit (domain.js:470:12)
+    at IncomingMessage.<anonymous> (C:\Users\Loc\Documents\GitHub\github-actions-learning\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:519:28)
+    at IncomingMessage.emit (events.js:412:35)
+    at IncomingMessage.emit (domain.js:470:12)
+    at endReadableNT (internal/streams/readable.js:1317:12)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21)
+[error] 
+[error] Error: Failed to get Firebase project fireship-lessons. Please make sure the project exists and your account has permission to access it.
